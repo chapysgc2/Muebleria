@@ -1,0 +1,136 @@
+<app-barra-navegacion></app-barra-navegacion>
+
+        <div class="container text-center">
+            <div class="shell">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4 col-xl-3">
+                            <div class="wsk-cp-product" style="height: 600px;">
+                                <div class="wsk-cp-img">
+                                    <img id="myImg"
+                                        src="https://mueblesavanti.com.mx/upload/productos/2674-c8da291e7ea68f21dace20304029d3ad.jpg"
+                                        alt="Snow" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                                </div>
+                                <div class="wsk-cp-text">
+                                    <div class="category">
+                                        <span>Luis Inffanzon</span>
+                                    </div>
+                                    <div class="title-product">
+                                        <h3>Mueble: Mesa de cedro</h3>
+                                    </div>
+                                    <div class="">
+                                        <p>Técnica: tallado</p>
+                                        <p>Medidas: 120 x 120 cm</p>
+                                        <p>Año: 2019</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4 col-xl-3">
+                            <div class="wsk-cp-product" style="height: 600px;">
+                                <div class="wsk-cp-img">
+                                    <img id="myImg"
+                                        src="https://mueblesavanti.com.mx/upload/productos/2674-c8da291e7ea68f21dace20304029d3ad.jpg"
+                                        alt="Snow" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+                                </div>
+                                <div class="wsk-cp-text">
+                                    <div class="category">
+                                        <span>Modelo 1</span>
+                                    </div>
+                                    <div class="title-product">
+                                        <h3>Mueble: Mesa de cedro</h3>
+                                    </div>
+                                    <div class="">
+                                        <p>Técnica: tallado</p>
+                                        <p>Medidas: 150 x 100 cm</p>
+                                        <p>Año: 2021</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                
+
+
+
+                </div>
+                <!--fIN LINEA TRES OBRAS-->
+
+            </div>
+
+        </div>
+
+    <!--TERMINA TARJETAS -->
+
+    <!--Inicia formulario-->
+    <br><br>
+    <hr>
+    <div class="container">
+        <legend class="text-center header">Contáctanos</legend>
+        <form class="row g-3">
+            <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
+
+            </div>
+            <div class="col-md-6">
+                <input type="email" class="form-control" placeholder="Email" aria-label="Email">
+            </div>
+            <div class="col-md-12">
+                <textarea type="text" class="form-control" placeholder="Comentario" aria-label="Comentario"></textarea>
+            </div>
+            <div class="col-12 text-center">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+        </form>
+    </div>
+    <!-- Termina formulario  -->
+    <!-- Footer -->
+    <app-barra-final></app-barra-final>
+
+
+    <script>
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
